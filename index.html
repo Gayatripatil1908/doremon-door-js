@@ -6,8 +6,7 @@
     <title>doremon-door</title>
     <style>
        body{
-        background-color: #d9d9d9;
-       
+        background-color:#ffb3da ;
        }
         .container{
             width: 500px;
@@ -54,6 +53,18 @@
             background-color: black;
             color: white;
         }
+
+        @media screen and (max-width:500px) {
+            .container{
+                width: 300px;
+               height: 400px;
+            }
+            .door{
+            
+                width: 90%;
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -61,19 +72,19 @@
         <img src="./img/close-door.jpeg" id="door" class="door">
 
         <div class="button">
-            <button class="btn-door btn-C" onclick="close()">Close</button>
-            <button class="btn-door btn-O" onclick="open()">Open</button>
+            <button class="btn-door btn-C" onclick="closeDoor()">Close</button>
+            <button class="btn-door btn-O" onclick="openDoor()">Open</button>
         </div>
     </div>
 
     <script>
         const doorElement = document.getElementById("door");
 
-        function open() {
+        function openDoor() {
             doorElement.src = "img/door-open.jpeg";
         }
 
-        function close() {
+        function closeDoor() {
             doorElement.src = "img/close-door.jpeg";
         }
 
